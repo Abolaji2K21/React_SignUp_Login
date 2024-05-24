@@ -3,6 +3,7 @@ import PageTemplate from "../../Components/PageTemplate";
 import {Link} from "react-router-dom";
 
 const SignUp = () => {
+
     return (
         <>
             <PageTemplate image={image} headerName={"Welcome"}
