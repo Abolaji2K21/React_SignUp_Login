@@ -1,10 +1,10 @@
 .btn{
     background: #55229e;
-    width: 100%;
+    width: 180%;
     padding: 20px 20px;
     color: white;
     font-size: medium;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-family: Arial, serif;
 }
