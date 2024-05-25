@@ -1,5 +1,5 @@
 import image from "../../../src/assets/signup.png"
-import PageTemplate from "../../Components/PageTemplate";
+import PageTemplate from "../../Components/PageTemplateForSignUp";
 
 const SignUp = () => {
     return (
