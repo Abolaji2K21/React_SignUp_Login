@@ -65,5 +65,13 @@
 .error{
     color: red;
 
+}
 
+.remember-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-container h6 {
+    margin: 0;
 }

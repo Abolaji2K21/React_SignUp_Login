@@ -14,7 +14,7 @@ const validationSchema = Yup.object().shape({
     password: Yup.string().required('*required'),
 });
 
-const PageTemplate = ({ image, headerName, message, buttonMessage, messageOne, link, buttonMessageOne }) => {
+const PageTemplate = ({ image, headerName, message, buttonMessage, messageOne, link, buttonMessageOne}) => {
     const [isLoading, setIsLoading] = useState(false);
 
     const submitButton = async (values, { resetForm }) => {
@@ -71,7 +71,7 @@ const PageTemplate = ({ image, headerName, message, buttonMessage, messageOne, l
                 <h1 style={{marginBottom: "5px", marginLeft: '100px'}}>{headerName}</h1>
                 <p style={{marginBottom: '10px', marginLeft: '90px', fontSize: "smaller"}}>{message}</p>
                 <Formik
-                    initialValues={{ username: '', password: ''}}
+                    initialValues={{username: '', password: ''}}
                     validationSchema={validationSchema}
                     onSubmit={submitButton}
                 >
@@ -97,6 +97,12 @@ const PageTemplate = ({ image, headerName, message, buttonMessage, messageOne, l
                                 <ErrorMessage name="password" component="div" className={style.error}/>
                             </div>
                             <br></br>
+                            <div className="remember-container">
+                                <h6 className="remember">Remember Me</h6>
+                                <h6 className="forget">Forget Password</h6>
+                            </div>
+
+                            <br></br>
                             <FilledButton text={buttonMessage}>
                                 {isLoading ? (
                                     <div className="flex items-center justify-center">
@@ -120,7 +126,8 @@ const PageTemplate = ({ image, headerName, message, buttonMessage, messageOne, l
             </div>
             <ToastContainer/>
         </div>
-    );
+    )
+        ;
 };
 
 export default PageTemplate;
