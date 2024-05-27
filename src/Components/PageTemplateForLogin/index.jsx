@@ -8,6 +8,7 @@ import axios from 'axios';
 import { Icon } from '@iconify/react';
 import loadingLoop from '@iconify/icons-line-md/loading-loop';
 import FilledButton from "../FilledButton";
+import Checkbox from "../PageTemplateForSignUp/Checkbox";
 
 const validationSchema = Yup.object().shape({
     username: Yup.string().required('*required'),
@@ -65,11 +66,11 @@ const PageTemplate = ({ image, headerName, message, buttonMessage, messageOne, l
     };
 
     return (
-        <div className={style.container}>
-            <img src={image} alt="" style={{width:'40%', height:'30%'}} />
+        <div style={{display: 'flex'}}>
+            <img src={image} alt="" style={{width: '40%', height: '30%'}}/>
             <div className={style.heroText}>
-                <h1 style={{marginBottom: "5px", marginLeft: '100px'}}>{headerName}</h1>
-                <p style={{marginBottom: '10px', marginLeft: '90px', fontSize: "smaller"}}>{message}</p>
+                <h1 style={{marginBottom: "5px", marginLeft: '5px'}}>{headerName}</h1>
+                <p style={{marginBottom: '10px', marginLeft: '-18px', fontSize: "smaller"}}>{message}</p>
                 <Formik
                     initialValues={{username: '', password: ''}}
                     validationSchema={validationSchema}
@@ -96,13 +97,12 @@ const PageTemplate = ({ image, headerName, message, buttonMessage, messageOne, l
                                 />
                                 <ErrorMessage name="password" component="div" className={style.error}/>
                             </div>
-                            <br></br>
-                            <div className="remember-container">
-                                <h6 className="remember">Remember Me</h6>
-                                <h6 className="forget">Forget Password</h6>
+
+                            <div style={{display: 'flex', alignItems: 'center', gap: '75px'}}>
+                                <Checkbox/>
+                                <p style={{fontSize: 'small'}}>Forgot password</p>
                             </div>
 
-                            <br></br>
                             <FilledButton text={buttonMessage}>
                                 {isLoading ? (
                                     <div className="flex items-center justify-center">
@@ -123,8 +123,15 @@ const PageTemplate = ({ image, headerName, message, buttonMessage, messageOne, l
                         </Form>
                     )}
                 </Formik>
+
             </div>
             <ToastContainer/>
+            {/*<div>*/}
+            {/*    <iframe width="1257" height="480" src="https://www.youtube.com/embed/cuEtnrL9-H0"*/}
+            {/*            title="Learn Fetch API In 6 Minutes" frameBorder="0"*/}
+            {/*            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"*/}
+            {/*            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>*/}
+            {/*</div>*/}
         </div>
     )
         ;

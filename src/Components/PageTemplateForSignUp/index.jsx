@@ -70,12 +70,12 @@ const PageTemplate = ({ image, headerName, message, buttonMessage, messageOne, l
 
     return (
         <div className={style.container}>
-            <img src={image} alt="" style={{width:'40%', height:'30%'}} />
+            <img src={image} alt="" style={{width: '40%', height: '30%'}}/>
             <div className={style.heroText}>
                 <h1 style={{marginBottom: "5px", marginLeft: '100px'}}>{headerName}</h1>
                 <p style={{marginBottom: '10px', marginLeft: '90px', fontSize: "smaller"}}>{message}</p>
                 <Formik
-                    initialValues={{ username: '', password: '', firstname: '', lastname: '' }}
+                    initialValues={{username: '', password: '', firstname: '', lastname: ''}}
                     validationSchema={validationSchema}
                     onSubmit={submitButton}
                 >
@@ -135,11 +135,24 @@ const PageTemplate = ({ image, headerName, message, buttonMessage, messageOne, l
                                 )}
                             </FilledButton>
                         </Form>
+
                     )}
                 </Formik>
+                {/*<div>*/}
+                {/*    <iframe width="1257" height="480" src="https://www.youtube.com/embed/cuEtnrL9-H0"*/}
+                {/*            title="Learn Fetch API In 6 Minutes" frameBorder="0"*/}
+                {/*            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"*/}
+                {/*            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>*/}
+                {/*</div>*/}
             </div>
-            <ToastContainer />
+
+
+            <ToastContainer/>
+
+
         </div>
+
+
     );
 };
 

@@ -11,9 +11,9 @@
 }
 .heroText{
     justify-content: center;
-    margin-left: 50px;
+    margin-left: 150px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 60px;
     align-items: center;
 }
 .formStyle{
@@ -27,6 +27,7 @@
     align-items: center;
     /*gap: 185px;*/
     font-size: 10px;
+    margin-right: 85px;
     font-weight: bold;
 }
 
@@ -47,16 +48,17 @@
     font-size: 10px;
     font-weight: bold;
     margin-top: -20px;
-    margin-right: -305px;
+    margin-left: 200px;
 
 }
 
 
 .inputField{
     /*display: flex;*/
+
     border-radius: 7px;
     border: 1px solid black;
-    width: 255px;
+    width: 300px;
     height: 40px;
     align-items: center;
 
@@ -67,11 +69,10 @@
 
 }
 
-.remember-container {
+.form .remember-forgot{
     display: flex;
     justify-content: space-between;
-}
+    font-size: 14.5px;
+    margin: -15px 0 15px;
 
-.remember-container h6 {
-    margin: 0;
 }
